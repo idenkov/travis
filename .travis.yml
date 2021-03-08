@@ -8,4 +8,4 @@ before_install:
   - docker build -t idenkov/travis -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true idenkov/travis npm run test
+  - docker run idenkov/travis npm run test -- --coverage
